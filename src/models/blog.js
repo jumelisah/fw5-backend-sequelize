@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize")
 const sequelize = require("../helpers/sequelize")
 
-const Users = require("./users")
+// const Users = require("./users")
 
 const Blog = sequelize.define("blog", {
     title: {
@@ -28,16 +28,13 @@ const Blog = sequelize.define("blog", {
             },
         }
     },
-    userId: {
-        type: Sequelize.INTEGER,
-        references: {
-            model: Users,
-            key: "id"
-        }
-    },
+    // userId: {
+    //     type: Sequelize.INTEGER,
+    //     references: {
+    //         model: Users,
+    //         key: "id"
+    //     }
+    // },
 })
-
-// Blog.hasOne(Users, {foreignKey: "userId"})
-// Blog.belongsTo(Users, {foreignKey: "userId"})
 
 module.exports = Blog
