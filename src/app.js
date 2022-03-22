@@ -12,6 +12,7 @@ app.use(cors())
 app.use(morgan("dev"))
 
 app.use("/", require("./routes"))
+app.use("/uploads", express.static("uploads"))
 
 app.listen(PORT, ()=> {
     console.log(`App listening on port ${PORT}`)
