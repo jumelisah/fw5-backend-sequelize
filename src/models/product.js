@@ -28,7 +28,7 @@ const Product = sequelize.define("products", {
         type: Sequelize.DECIMAL,
         validate: {
             isDecimal: {
-              msg: "Price must be a number or decimal value"
+                msg: "Price must be a number or decimal value"
             },
             min: 0
         }
