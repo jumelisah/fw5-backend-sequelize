@@ -34,15 +34,6 @@ const Customers = sequelize.define("customers", {
     },
     address: {
         type: Sequelize.TEXT,
-    },
-    password: {
-        type: Sequelize.STRING,
-        validate: {
-            min: 4
-        }
-    },
-    image: {
-        type: Sequelize.TEXT,
     }
 })
 

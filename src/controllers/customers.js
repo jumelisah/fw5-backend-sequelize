@@ -89,3 +89,20 @@ exports.updateCustomer = async (req, res) => {
         })
     }
 }
+
+exports.deleteCustomer = async (req, res) => {
+    const {id} = req.params
+    const customer = await Customers.findByPk(id)
+    if (customer) {
+        await customer.destroy()
+        return res.send({
+            success: true,
+            message: "Customer successfully deleted"
+        })
+    } else {
+        return res.status(404).send({
+            success: false,
+            message: "Customer undifined"
+        })
+    }
+}
