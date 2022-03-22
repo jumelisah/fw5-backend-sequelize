@@ -5,11 +5,11 @@ const Users = require("./users")
 
 const Phones = sequelize.define("phones", {
     userId: {
-        type: Sequelize.INTEGER,
-        references: {
-            model: Users,
-            key: "id"
-        }
+        type: Sequelize.INTEGER
+        // references: {
+        //     model: Users,
+        //     key: "id"
+        // }
     },
     number: Sequelize.STRING
 })
