@@ -25,6 +25,14 @@ const Blog = sequelize.define("blog", {
                 msg: "Category ID cannot be empty"
             },
         }
+    },
+    userId: {
+        type: Sequelize.INTEGER,
+        validate: {
+            notEmpty: {
+                msg: "Category ID cannot be empty"
+            },
+        }
     }
 })
 
