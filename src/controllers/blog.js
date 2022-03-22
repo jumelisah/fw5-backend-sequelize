@@ -4,9 +4,6 @@ const Sequelize = require("sequelize")
 exports.getAllBlog = async(req, res)=> {
     const {search=""} = req.query
     const results = await Blog.findAll({
-        // include: [
-        //     {Users}
-        // ],
         where: {
             title: {
                 [Sequelize.Op.like]: `%${search}%`

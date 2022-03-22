@@ -1,8 +1,6 @@
 const Sequelize = require("sequelize")
 const sequelize = require("../helpers/sequelize")
 
-// const Users = require("./users")
-
 const Blog = sequelize.define("blog", {
     title: {
         type: Sequelize.STRING,
@@ -27,14 +25,7 @@ const Blog = sequelize.define("blog", {
                 msg: "Category ID cannot be empty"
             },
         }
-    },
-    // userId: {
-    //     type: Sequelize.INTEGER,
-    //     references: {
-    //         model: Users,
-    //         key: "id"
-    //     }
-    // },
+    }
 })
 
 module.exports = Blog
